@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Logs Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Traffic Logs Analysis</h1>
+    </header>
+    <main>
+        <form action="/run-scripts" method="post">
+            <button type="submit">Run Scripts</button>
+        </form>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>2024 Traffic Logs Analysis</p>
+    </footer>
+</body>
+</html>
+
